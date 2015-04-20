@@ -1,0 +1,13 @@
+#loginbox{
+    width: 50%;
+}
+
+body {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prispevek{
+    border: #47a447 solid;
+}

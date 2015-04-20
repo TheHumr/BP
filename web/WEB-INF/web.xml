@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>UserCheckFilter</filter-name>
+        <filter-class>UserCheckFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>UserCheckFilter</filter-name>
+        <url-pattern>/home</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>servlets.Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>NewServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>servlets.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Servlet</servlet-name>
+        <url-pattern>/prihlasit</url-pattern>
+        <url-pattern>/registrace</url-pattern>
+        <url-pattern>/odhlasit</url-pattern>
+        <url-pattern>/vytvoritPrispevek</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+<!--        <cookie-config>
+            <secure>true</secure>
+        </cookie-config>-->
+    </session-config>
+</web-app>
